@@ -1,5 +1,4 @@
-const postgres = require('postgres');
-const sql = postgres(process.env.DATABASE_URL);
+const sql = require('../db');
 
 async function getUserByUsername(username) {
   const users = await sql`SELECT * FROM users WHERE username = ${username}`;

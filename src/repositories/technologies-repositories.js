@@ -2,7 +2,7 @@
 const sql = require('../db');
 
 exports.getAllTechnologies = async () => {
-    return await sql`SELECT name FROM technologies`;
+    return await sql`SELECT id, name FROM technologies`;
 };
 
 exports.getTechnologyById = async (id) => {
